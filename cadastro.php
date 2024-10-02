@@ -1,5 +1,5 @@
 <?php
-require 'configPDO.php'
+require "configPDO.php";
 ?>
 
 <!DOCTYPE html>
@@ -12,10 +12,10 @@ require 'configPDO.php'
 <body>
 <form action="inserir.php" method="post">
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required><br><br>
+        <input type="text"  name="nome" required><br><br>
         
         <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email"  name="email" required><br><br>
         
         <button type="submit">Salvar</button>
     </form>
