@@ -1,4 +1,4 @@
-<?php require "configPDO.php";
+<?php require 'configPDO.php';
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 
@@ -10,8 +10,8 @@ if($nome && $email){
 
 //executar pareamento
 
-$sql->execute();
-// header("location:table.php");
+$sql->execute(); 
+header("location:table.php");
 }else{
     header("Location:cadastro.php");
 }

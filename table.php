@@ -1,4 +1,5 @@
-<?php require "configPDO.php";
+<?php 
+require 'configPDO.php';
 $lista = [];
 $sql = $pdo->query("SELECT * FROM usuario");
 if($sql->rowcount() > 0){
@@ -23,17 +24,19 @@ if($sql->rowcount() > 0){
     <th>Email</th>
 </tr>
 
-<?php foreach($lista as $usuario):?>
+
+<?php 
+
+foreach($lista as $usuario):?>
 
 <tr>
-<td><?=$usuario["id"]?></td>
-<td><?=$usuario["nome"]?></td>
-<td><?=$usuario["email"]?></td>
-<td><a href="editar.php">editar</a></td>
-<td><a href="excluir.php">excluir</a></td>
+<td> <?=$usuario['id'];?> </td>
+<td> <?=$usuario['nome'];?></td>
+<td> <?=$usuario['email'];?></td>
+<td><a href="editar.php?id=<?=$usuario['id'];?> "> editar</a></td>
+<td><a href="excluir.php?id=<?=$usuario['id'];?> "> excluir</a></td>
 </tr>
-<?php endforeach;
-?>
+<?php endforeach; ?>
 </table>
 </body>
 </html>

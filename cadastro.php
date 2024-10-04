@@ -1,5 +1,5 @@
 <?php
-require "configPDO.php";
+require 'configPDO.php';
 ?>
 
 <!DOCTYPE html>
